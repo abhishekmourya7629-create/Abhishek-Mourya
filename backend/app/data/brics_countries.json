@@ -1,0 +1,268 @@
+{
+  "India": {
+    "currency": "INR (₹)",
+    "currency_symbol": "₹",
+    "budget_multiplier_usd": 0.012,
+    "districts": [
+      {
+        "district": "Banda",
+        "state": "Uttar Pradesh",
+        "lat": 25.48,
+        "lng": 80.33,
+        "population": 1799410,
+        "poverty_index": 0.76,
+        "infrastructure_index": {"water": 0.15, "roads": 0.32, "health": 0.28, "electricity": 0.45, "broadband": 0.20, "schools": 0.35},
+        "planned_investment_usd_m": {"water": 0.0, "roads": 2.1, "health": 1.0, "electricity": 3.5, "broadband": 0.4, "schools": 0.8},
+        "description": "Bundelkhand drought belt experiencing severe groundwater depletion and dried tubewells."
+      },
+      {
+        "district": "Mahoba",
+        "state": "Uttar Pradesh",
+        "lat": 25.29,
+        "lng": 79.87,
+        "population": 875958,
+        "poverty_index": 0.72,
+        "infrastructure_index": {"water": 0.18, "roads": 0.28, "health": 0.25, "electricity": 0.42, "broadband": 0.18, "schools": 0.30},
+        "planned_investment_usd_m": {"water": 0.0, "roads": 1.2, "health": 0.5, "electricity": 2.0, "broadband": 0.2, "schools": 0.4},
+        "description": "Arid agricultural district with dry village tanks and broken handpumps."
+      },
+      {
+        "district": "Chitrakoot",
+        "state": "Uttar Pradesh",
+        "lat": 25.20,
+        "lng": 80.88,
+        "population": 991730,
+        "poverty_index": 0.74,
+        "infrastructure_index": {"water": 0.20, "roads": 0.30, "health": 0.24, "electricity": 0.40, "broadband": 0.15, "schools": 0.32},
+        "planned_investment_usd_m": {"water": 0.0, "roads": 1.5, "health": 0.8, "electricity": 1.8, "broadband": 0.3, "schools": 0.5},
+        "description": "Forested Bundelkhand district with fluoride water contamination issues."
+      },
+      {
+        "district": "Mumbai Suburban",
+        "state": "Maharashtra",
+        "lat": 19.04,
+        "lng": 72.85,
+        "population": 9356962,
+        "poverty_index": 0.48,
+        "infrastructure_index": {"water": 0.40, "roads": 0.65, "health": 0.62, "electricity": 0.88, "broadband": 0.85, "schools": 0.68},
+        "planned_investment_usd_m": {"water": 14.5, "roads": 28.0, "health": 18.2, "electricity": 15.0, "broadband": 9.5, "schools": 12.0},
+        "description": "High-density urban wards (Dharavi, Govandi, Kurla) facing monsoon sewer overflows."
+      },
+      {
+        "district": "Gadchiroli",
+        "state": "Maharashtra",
+        "lat": 20.18,
+        "lng": 80.00,
+        "population": 1072942,
+        "poverty_index": 0.79,
+        "infrastructure_index": {"water": 0.35, "roads": 0.22, "health": 0.19, "electricity": 0.38, "broadband": 0.12, "schools": 0.28},
+        "planned_investment_usd_m": {"water": 1.0, "roads": 1.8, "health": 0.8, "electricity": 1.5, "broadband": 0.1, "schools": 0.6},
+        "description": "Tribal forested district lacking emergency maternity clinics and all-weather bridges."
+      },
+      {
+        "district": "Kalahandi",
+        "state": "Odisha",
+        "lat": 19.91,
+        "lng": 83.16,
+        "population": 1576869,
+        "poverty_index": 0.82,
+        "infrastructure_index": {"water": 0.25, "roads": 0.26, "health": 0.21, "electricity": 0.35, "broadband": 0.14, "schools": 0.24},
+        "planned_investment_usd_m": {"water": 1.2, "roads": 2.0, "health": 0.9, "electricity": 2.1, "broadband": 0.2, "schools": 0.5},
+        "description": "Vulnerable agricultural community demanding reliable primary health centers and electrification."
+      },
+      {
+        "district": "Barmer",
+        "state": "Rajasthan",
+        "lat": 25.75,
+        "lng": 71.39,
+        "population": 2603751,
+        "poverty_index": 0.66,
+        "infrastructure_index": {"water": 0.22, "roads": 0.38, "health": 0.30, "electricity": 0.44, "broadband": 0.25, "schools": 0.34},
+        "planned_investment_usd_m": {"water": 1.5, "roads": 3.0, "health": 1.2, "electricity": 4.0, "broadband": 0.8, "schools": 1.0},
+        "description": "Thar desert hamlets requiring pipeline feeder connections and solar mini-grids."
+      },
+      {
+        "district": "Wayanad",
+        "state": "Kerala",
+        "lat": 11.68,
+        "lng": 76.13,
+        "population": 817420,
+        "poverty_index": 0.26,
+        "infrastructure_index": {"water": 0.70, "roads": 0.55, "health": 0.75, "electricity": 0.82, "broadband": 0.68, "schools": 0.80},
+        "planned_investment_usd_m": {"water": 2.0, "roads": 4.5, "health": 2.2, "electricity": 2.8, "broadband": 1.5, "schools": 2.0},
+        "description": "Western Ghats hilly terrain susceptible to monsoon landslides requiring culvert reinforcement."
+      },
+      {
+        "district": "South Delhi",
+        "state": "Delhi",
+        "lat": 28.53,
+        "lng": 77.24,
+        "population": 2731929,
+        "poverty_index": 0.11,
+        "infrastructure_index": {"water": 0.85, "roads": 0.90, "health": 0.92, "electricity": 0.95, "broadband": 0.94, "schools": 0.88},
+        "planned_investment_usd_m": {"water": 5.0, "roads": 12.0, "health": 8.0, "electricity": 7.0, "broadband": 18.5, "schools": 6.0},
+        "description": "Affluent capital district with over-budgeted smart broadband allocation and minimal citizen complaints."
+      }
+    ]
+  },
+  "Brazil": {
+    "currency": "BRL (R$)",
+    "currency_symbol": "R$",
+    "budget_multiplier_usd": 0.18,
+    "districts": [
+      {
+        "district": "Caruaru",
+        "state": "Pernambuco",
+        "lat": -8.28,
+        "lng": -35.97,
+        "population": 378052,
+        "poverty_index": 0.62,
+        "infrastructure_index": {"water": 0.28, "roads": 0.22, "health": 0.35, "electricity": 0.60, "broadband": 0.30, "schools": 0.40},
+        "planned_investment_usd_m": {"water": 0.4, "roads": 0.0, "health": 0.8, "electricity": 1.2, "broadband": 0.2, "schools": 0.5},
+        "description": "Agreste semi-arid hub with washed-out rural farm access bridges and pothole devastation."
+      },
+      {
+        "district": "Garanhuns",
+        "state": "Pernambuco",
+        "lat": -8.89,
+        "lng": -36.49,
+        "population": 142506,
+        "poverty_index": 0.59,
+        "infrastructure_index": {"water": 0.32, "roads": 0.30, "health": 0.38, "electricity": 0.58, "broadband": 0.28, "schools": 0.42},
+        "planned_investment_usd_m": {"water": 0.2, "roads": 0.5, "health": 0.6, "electricity": 0.9, "broadband": 0.1, "schools": 0.3},
+        "description": "Highland agricultural municipality experiencing tanker water reliance."
+      },
+      {
+        "district": "Manaus",
+        "state": "Amazonas",
+        "lat": -3.11,
+        "lng": -60.02,
+        "population": 2063547,
+        "poverty_index": 0.56,
+        "infrastructure_index": {"water": 0.42, "roads": 0.38, "health": 0.32, "electricity": 0.55, "broadband": 0.35, "schools": 0.45},
+        "planned_investment_usd_m": {"water": 2.5, "roads": 3.0, "health": 4.0, "electricity": 4.5, "broadband": 1.0, "schools": 2.2},
+        "description": "Amazon riverfront community requesting medical response boats and floating clinic docks."
+      },
+      {
+        "district": "Pinheiros",
+        "state": "São Paulo",
+        "lat": -23.56,
+        "lng": -46.69,
+        "population": 289743,
+        "poverty_index": 0.10,
+        "infrastructure_index": {"water": 0.91, "roads": 0.88, "health": 0.93, "electricity": 0.96, "broadband": 0.95, "schools": 0.90},
+        "planned_investment_usd_m": {"water": 3.0, "roads": 15.0, "health": 6.0, "electricity": 5.0, "broadband": 14.0, "schools": 4.0},
+        "description": "Wealthy financial zone with surplus streetscape beautification budget and zero severe demand."
+      }
+    ]
+  },
+  "South Africa": {
+    "currency": "ZAR (R)",
+    "currency_symbol": "R",
+    "budget_multiplier_usd": 0.054,
+    "districts": [
+      {
+        "district": "Vhembe",
+        "state": "Limpopo",
+        "lat": -22.95,
+        "lng": 30.48,
+        "population": 1402779,
+        "poverty_index": 0.68,
+        "infrastructure_index": {"water": 0.24, "roads": 0.28, "health": 0.21, "electricity": 0.45, "broadband": 0.18, "schools": 0.32},
+        "planned_investment_usd_m": {"water": 0.8, "roads": 1.2, "health": 0.1, "electricity": 1.5, "broadband": 0.2, "schools": 0.6},
+        "description": "Deep rural district with severe clinic medicine stockouts and lack of maternity backup power."
+      },
+      {
+        "district": "Mopani",
+        "state": "Limpopo",
+        "lat": -23.82,
+        "lng": 30.68,
+        "population": 1159185,
+        "poverty_index": 0.65,
+        "infrastructure_index": {"water": 0.22, "roads": 0.31, "health": 0.26, "electricity": 0.48, "broadband": 0.20, "schools": 0.36},
+        "planned_investment_usd_m": {"water": 0.0, "roads": 1.0, "health": 0.7, "electricity": 1.8, "broadband": 0.3, "schools": 0.5},
+        "description": "Rural communities facing dry water reticulation pipes and unreliable tanker supply."
+      },
+      {
+        "district": "Alexandra",
+        "state": "Gauteng",
+        "lat": -26.10,
+        "lng": 28.09,
+        "population": 179624,
+        "poverty_index": 0.55,
+        "infrastructure_index": {"water": 0.45, "roads": 0.48, "health": 0.50, "electricity": 0.38, "broadband": 0.52, "schools": 0.44},
+        "planned_investment_usd_m": {"water": 4.0, "roads": 5.0, "health": 3.5, "electricity": 8.5, "broadband": 2.0, "schools": 3.0},
+        "description": "Dense informal settlement battling blown electrical transformers and load-reduction blackouts."
+      },
+      {
+        "district": "Sandton",
+        "state": "Gauteng",
+        "lat": -26.10,
+        "lng": 28.05,
+        "population": 222415,
+        "poverty_index": 0.09,
+        "infrastructure_index": {"water": 0.90, "roads": 0.92, "health": 0.95, "electricity": 0.89, "broadband": 0.96, "schools": 0.92},
+        "planned_investment_usd_m": {"water": 2.0, "roads": 11.0, "health": 4.0, "electricity": 6.0, "broadband": 12.0, "schools": 3.0},
+        "description": "High-income commercial hub with unneeded fiber optic expansions budgeted."
+      }
+    ]
+  },
+  "Russia": {
+    "currency": "RUB (₽)",
+    "currency_symbol": "₽",
+    "budget_multiplier_usd": 0.011,
+    "districts": [
+      {
+        "district": "Yakutsk",
+        "state": "Sakha Republic",
+        "lat": 62.03,
+        "lng": 129.73,
+        "population": 355461,
+        "poverty_index": 0.34,
+        "infrastructure_index": {"water": 0.45, "roads": 0.35, "health": 0.52, "electricity": 0.45, "broadband": 0.48, "schools": 0.55},
+        "planned_investment_usd_m": {"water": 4.0, "roads": 5.5, "health": 3.0, "electricity": 12.5, "broadband": 2.0, "schools": 3.5},
+        "description": "Permafrost urban center demanding winter heating grid rehabilitation and insulated pipes."
+      },
+      {
+        "district": "Birobidzhan",
+        "state": "Jewish Autonomous Oblast",
+        "lat": 48.79,
+        "lng": 132.92,
+        "population": 70096,
+        "poverty_index": 0.49,
+        "infrastructure_index": {"water": 0.42, "roads": 0.36, "health": 0.40, "electricity": 0.48, "broadband": 0.35, "schools": 0.32},
+        "planned_investment_usd_m": {"water": 0.5, "roads": 1.0, "health": 0.6, "electricity": 1.2, "broadband": 0.3, "schools": 0.0},
+        "description": "Far East town with freezing school radiator failures and zero allocated boiler renovation funds."
+      }
+    ]
+  },
+  "China": {
+    "currency": "CNY (¥)",
+    "currency_symbol": "¥",
+    "budget_multiplier_usd": 0.14,
+    "districts": [
+      {
+        "district": "Zhoukou",
+        "state": "Henan",
+        "lat": 33.62,
+        "lng": 114.64,
+        "population": 8802000,
+        "poverty_index": 0.42,
+        "infrastructure_index": {"water": 0.55, "roads": 0.52, "health": 0.48, "electricity": 0.65, "broadband": 0.42, "schools": 0.36},
+        "planned_investment_usd_m": {"water": 2.0, "roads": 4.0, "health": 3.0, "electricity": 5.0, "broadband": 1.5, "schools": 0.0},
+        "description": "Agrarian prefecture where rural village primary schools lack winter heating and digital classrooms."
+      },
+      {
+        "district": "Liangshan",
+        "state": "Sichuan",
+        "lat": 27.88,
+        "lng": 102.26,
+        "population": 4858000,
+        "poverty_index": 0.61,
+        "infrastructure_index": {"water": 0.40, "roads": 0.29, "health": 0.33, "electricity": 0.50, "broadband": 0.28, "schools": 0.38},
+        "planned_investment_usd_m": {"water": 1.8, "roads": 1.1, "health": 1.5, "electricity": 3.0, "broadband": 0.8, "schools": 1.2},
+        "description": "Rugged mountain prefecture requiring cliff-side road guardrails and clinic internet linkage."
+      }
+    ]
+  }
+}
