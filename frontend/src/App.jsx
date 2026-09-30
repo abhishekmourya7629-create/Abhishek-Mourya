@@ -17,7 +17,7 @@ import { Bot, Sparkles } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('India');
   const [countries, setCountries] = useState([]);
   const [regime, setRegime] = useState(null);

@@ -3,7 +3,7 @@ import {
   LayoutDashboard, Layers, FileText, BarChart2, MapPin, 
   Table, ChevronDown, ChevronRight, Inbox, CheckCircle2, 
   Activity, Scale, Sliders, Shield, Compass, Sparkles, Cpu, Zap,
-  Bot, MessageSquare, Mic
+  Bot, MessageSquare, Mic, X
 } from 'lucide-react';
 
 export default function NagrikSidebar({ 
@@ -15,26 +15,44 @@ export default function NagrikSidebar({
   const [dashboardOpen, setDashboardOpen] = useState(true);
 
   return (
-    <aside className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#0a0c14]/95 backdrop-blur-2xl border-r border-white/10 text-white transition-transform duration-300 ease-in-out md:translate-x-0 ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
-    } flex flex-col shadow-2xl`}>
-      
-      {/* Brand Header */}
-      <div className="h-16 flex items-center px-6 border-b border-white/10">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-300 p-[1.5px] shadow-lg shadow-emerald-500/30">
-            <div className="w-full h-full bg-[#080d14] rounded-[6px] flex items-center justify-center font-heading font-black text-sm text-emerald-400">
-              <Zap className="w-4 h-4 fill-emerald-400" />
+    <>
+      {/* Mobile Backdrop */}
+      {isOpen && (
+        <div 
+          onClick={() => setIsOpen(false)} 
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 md:hidden"
+        />
+      )}
+
+      <aside className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#0a0c14]/95 backdrop-blur-2xl border-r border-white/10 text-white transition-transform duration-300 ease-in-out ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      } flex flex-col shadow-2xl`}>
+        
+        {/* Brand Header */}
+        <div className="h-16 flex items-center justify-between px-5 border-b border-white/10">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-300 p-[1.5px] shadow-lg shadow-emerald-500/30">
+              <div className="w-full h-full bg-[#080d14] rounded-[6px] flex items-center justify-center font-heading font-black text-sm text-emerald-400">
+                <Zap className="w-4 h-4 fill-emerald-400" />
+              </div>
             </div>
+            <span className="font-heading font-black text-xl tracking-wider text-white">
+              NAGRIK
+            </span>
+            <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              AI 2.0
+            </span>
           </div>
-          <span className="font-heading font-black text-xl tracking-wider text-white">
-            NAGRIK
-          </span>
-          <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 ml-auto">
-            AI 2.0
-          </span>
+
+          {/* Close Sidebar Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+            title="Close Sidebar"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
-      </div>
 
       {/* Sovereign System Core Node Badge */}
       <div className="px-5 py-4 border-b border-white/10 flex items-center gap-3 bg-white/[0.02]">
@@ -274,5 +292,6 @@ export default function NagrikSidebar({
       </div>
 
     </aside>
+    </>
   );
 }
