@@ -42,13 +42,12 @@ export default function EmeraldLoadingScreen({ onComplete }) {
   if (hidden) return null;
 
   return (
-    <div 
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#06090c] transition-opacity duration-700 pointer-events-none ${
-        stage === 2 ? 'opacity-0' : 'opacity-100'
-      }`}
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#06090c] transition-opacity duration-700 pointer-events-none ${stage === 2 ? 'opacity-0' : 'opacity-100'
+        }`}
     >
       {/* Volumetric Emerald Aurora Glow in Center/Top (Matching Video 00:00 - 00:02) */}
-      <div 
+      <div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[450px] rounded-full blur-[130px] transition-all duration-1000"
         style={{
           background: 'radial-gradient(circle, rgba(0, 230, 118, 0.35) 0%, rgba(16, 185, 129, 0.15) 45%, transparent 75%)'
@@ -59,15 +58,14 @@ export default function EmeraldLoadingScreen({ onComplete }) {
       {FLOATING_SYMBOLS.map((sym, idx) => (
         <span
           key={idx}
-          style={{ 
-            top: sym.top, 
-            left: sym.left, 
+          style={{
+            top: sym.top,
+            left: sym.left,
             right: sym.right,
             animationDelay: sym.delay
           }}
-          className={`absolute font-mono font-bold text-emerald-400/40 select-none animate-floatSlow pointer-events-none ${sym.size} ${
-            stage >= 1 ? 'opacity-60 scale-100' : 'opacity-0 scale-75'
-          } transition-all duration-1000`}
+          className={`absolute font-mono font-bold text-emerald-400/40 select-none animate-floatSlow pointer-events-none ${sym.size} ${stage >= 1 ? 'opacity-60 scale-100' : 'opacity-0 scale-75'
+            } transition-all duration-1000`}
         >
           {sym.text}
         </span>
@@ -78,12 +76,11 @@ export default function EmeraldLoadingScreen({ onComplete }) {
 
       {/* Center Reveal */}
       <div className="relative flex flex-col items-center justify-center text-center max-w-lg px-6">
-        
+
         {/* Glowing Monogram */}
-        <div 
-          className={`w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 to-cyan-400 p-[2px] shadow-2xl shadow-emerald-500/40 transition-all duration-700 transform ${
-            stage >= 1 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
-          }`}
+        <div
+          className={`w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 to-cyan-400 p-[2px] shadow-2xl shadow-emerald-500/40 transition-all duration-700 transform ${stage >= 1 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
+            }`}
         >
           <div className="w-full h-full bg-[#080d12] rounded-[14px] flex items-center justify-center">
             <Zap className="w-8 h-8 fill-emerald-400 text-emerald-400 animate-pulse" />
@@ -91,27 +88,24 @@ export default function EmeraldLoadingScreen({ onComplete }) {
         </div>
 
         {/* Title Reveal */}
-        <h1 
-          className={`mt-4 font-heading font-black text-2xl sm:text-3xl text-white tracking-wider transition-all duration-700 delay-150 transform ${
-            stage >= 1 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          }`}
+        <h1
+          className={`mt-4 font-heading font-black text-2xl sm:text-3xl text-white tracking-wider transition-all duration-700 delay-150 transform ${stage >= 1 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+            }`}
         >
           NAGRIK
         </h1>
 
-        <p 
-          className={`mt-1 text-xs font-mono text-emerald-400 font-semibold tracking-widest uppercase transition-all duration-700 delay-300 transform ${
-            stage >= 1 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          }`}
+        <p
+          className={`mt-1 text-xs font-mono text-emerald-400 font-semibold tracking-widest uppercase transition-all duration-700 delay-300 transform ${stage >= 1 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+            }`}
         >
           SOVEREIGN CITIZEN DEMAND INTELLIGENCE
         </p>
 
         {/* Subtitle / Loading progress bar */}
-        <div 
-          className={`mt-5 w-48 h-1 rounded-full bg-white/10 overflow-hidden transition-all duration-500 delay-500 ${
-            stage >= 1 ? 'opacity-100' : 'opacity-0'
-          }`}
+        <div
+          className={`mt-5 w-48 h-1 rounded-full bg-white/10 overflow-hidden transition-all duration-500 delay-500 ${stage >= 1 ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <div className="w-full h-full bg-gradient-to-r from-emerald-400 to-cyan-400 animate-[loadingBar_1.8s_ease-out_forwards]" />
         </div>
