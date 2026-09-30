@@ -14,7 +14,8 @@ export default function NagrikHeader({
   setLang,
   onSearch,
   searchVal,
-  setSearchVal
+  setSearchVal,
+  onOpenTrustDrawer
 }) {
   return (
     <header className="h-16 bg-[#0a0c14]/90 backdrop-blur-xl border-b border-white/10 px-4 lg:px-8 flex items-center justify-between sticky top-0 z-30 shadow-lg">
@@ -90,12 +91,19 @@ export default function NagrikHeader({
           <span className="w-2 h-2 rounded-full bg-emerald-400 absolute top-1.5 right-1.5"></span>
         </button>
 
-        {/* Sovereign Node Badge (No personal pic or name) */}
-        <div className="flex items-center gap-2 pl-3 border-l border-white/10">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-sm shadow-emerald-500/20">
-            <ShieldCheck className="w-4 h-4" />
+        {/* Sovereign Node Badge (Click to open Trust & Compliance Drawer) */}
+        <button
+          onClick={onOpenTrustDrawer}
+          className="flex items-center gap-2 pl-3 border-l border-white/10 group cursor-pointer"
+          title="Open Sovereign Trust & DPDP Compliance Drawer"
+        >
+          <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 transition-all shadow-sm shadow-emerald-500/20">
+            <ShieldCheck className="w-4 h-4 group-hover:scale-110 transition-transform" />
+            <span className="hidden sm:inline text-xs font-mono font-bold text-emerald-300">
+              DPDP Verified
+            </span>
           </div>
-        </div>
+        </button>
 
       </div>
 

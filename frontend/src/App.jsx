@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import NagrikSidebar from './components/NagrikSidebar';
 import NagrikHeader from './components/NagrikHeader';
-import NagrikDashboardView from './views/NagrikDashboardView';
-import GoogleMapsView from './views/GoogleMapsView';
-import DashboardView from './views/DashboardView';
-import IntakeSimulatorView from './views/IntakeSimulatorView';
-import ReviewQueueView from './views/ReviewQueueView';
+import TrustDrawer from './components/TrustDrawer';
+import LiveCivicMapView from './views/LiveCivicMapView';
+import PriorityEngineView from './views/PriorityEngineView';
 import ImpactLedgerView from './views/ImpactLedgerView';
-import TrustCenterView from './views/TrustCenterView';
-import WhatsAppView from './views/WhatsAppView';
-import VoiceMailView from './views/VoiceMailView';
-import ChatbotView from './views/ChatbotView';
+import OmnichannelIntakeView from './views/OmnichannelIntakeView';
 import NagrikChatbotModal from './components/NagrikChatbotModal';
 import { translations } from './i18n/translations';
 import { Bot, Sparkles } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  // Default to Live Civic Map as approved by user
+  const [activeTab, setActiveTab] = useState('map');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('India');
   const [countries, setCountries] = useState([]);
@@ -24,6 +20,7 @@ export default function App() {
   const [lang, setLang] = useState('en');
   const [searchVal, setSearchVal] = useState('');
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+  const [isTrustDrawerOpen, setIsTrustDrawerOpen] = useState(false);
 
   const t = translations[lang] || translations.en;
 
@@ -70,6 +67,7 @@ export default function App() {
         setActiveTab={setActiveTab}
         isOpen={sidebarOpen}
         setIsOpen={setSidebarOpen}
+        onOpenTrustDrawer={() => setIsTrustDrawerOpen(true)}
       />
 
       {/* Main Content Area */}
@@ -88,69 +86,46 @@ export default function App() {
           setLang={setLang}
           searchVal={searchVal}
           setSearchVal={setSearchVal}
+          onOpenTrustDrawer={() => setIsTrustDrawerOpen(true)}
         />
 
-        {/* Dynamic View Container */}
+        {/* Dynamic Streamlined View Container */}
         <main className="flex-1 p-4 lg:p-8 max-w-7xl w-full mx-auto">
-          {activeTab === 'dashboard' && (
-            <NagrikDashboardView
-              selectedCountry={selectedCountry}
+          {/* 1. Live Civic Map (Landing View) */}
+          {(activeTab === 'map' || activeTab === 'dashboard') && (
+            <LiveCivicMapView
               onNavigateTab={setActiveTab}
-            />
-          )}
-
-          {activeTab === 'map' && (
-            <GoogleMapsView />
-          )}
-
-          {activeTab === 'priority' && (
-            <DashboardView
               selectedCountry={selectedCountry}
               t={t}
             />
           )}
 
-          {activeTab === 'whatsapp' && (
-            <WhatsAppView onNavigateTab={setActiveTab} />
-          )}
-
-          {activeTab === 'voicemail' && (
-            <VoiceMailView onNavigateTab={setActiveTab} />
-          )}
-
-          {activeTab === 'chatbot' && (
-            <ChatbotView selectedCountry={selectedCountry} onNavigateTab={setActiveTab} />
-          )}
-
-          {activeTab === 'intake' && (
-            <IntakeSimulatorView
+          {/* 2. Civic Priority Engine (Scoring, Sliders, Review Queue) */}
+          {(activeTab === 'priority' || activeTab === 'review') && (
+            <PriorityEngineView
               selectedCountry={selectedCountry}
               t={t}
             />
           )}
 
-          {activeTab === 'review' && (
-            <ReviewQueueView
-              t={t}
-            />
-          )}
-
-          {activeTab === 'impact' && (
+          {/* 3. Public Impact Ledger */}
+          {(activeTab === 'ledger' || activeTab === 'impact') && (
             <ImpactLedgerView
               t={t}
             />
           )}
 
-          {activeTab === 'trust' && (
-            <TrustCenterView
+          {/* 4. Unified Omnichannel Intake Hub */}
+          {(activeTab === 'intake' || activeTab === 'whatsapp' || activeTab === 'voicemail' || activeTab === 'chatbot') && (
+            <OmnichannelIntakeView
+              onNavigateTab={setActiveTab}
               selectedCountry={selectedCountry}
-              regime={regime}
               t={t}
             />
           )}
         </main>
 
-        {/* Global Floating AI Copilot Trigger (Bottom-Right) - Emerald Neon */}
+        {/* Global Floating AI Copilot Trigger (Bottom-Right) */}
         <button
           onClick={() => setIsChatModalOpen(true)}
           title="Open NAGRIK AI Copilot"
@@ -172,6 +147,14 @@ export default function App() {
           onNavigateTab={setActiveTab}
         />
 
+        {/* Sovereign Trust & Compliance Slide-Over Drawer */}
+        <TrustDrawer
+          isOpen={isTrustDrawerOpen}
+          onClose={() => setIsTrustDrawerOpen(false)}
+          selectedCountry={selectedCountry}
+          regime={regime}
+        />
+
         {/* Footer */}
         <footer className="border-t border-white/10 bg-[#070b10]/95 py-4 px-6 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2">
@@ -179,7 +162,7 @@ export default function App() {
               NAGRIK AI
             </span>
             <span>—</span>
-            <span>Demand Intelligence at the Sovereign Edge</span>
+            <span>Sovereign Citizen Demand Intelligence</span>
           </div>
 
           <div className="flex items-center gap-3 text-[11px] font-mono">
@@ -187,7 +170,7 @@ export default function App() {
               Google Maps Enabled
             </span>
             <span>·</span>
-            <span>Regime: {regime?.regime_name || 'DPDP Act, 2023'}</span>
+            <span>DPDP Act, 2023 Verified</span>
           </div>
         </footer>
 
